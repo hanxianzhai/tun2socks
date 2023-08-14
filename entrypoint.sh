@@ -83,10 +83,10 @@ run() {
   fi
 
   exec tun2socks \
-    -loglevel "$LOGLEVEL" \
-    -device "$TUN" \
-    -proxy "$PROXY" \
-    -interface "$INTERFACE"
+    --loglevel "$LOGLEVEL" \
+    --device "$TUN" \
+    --proxy $PROXY \
+    --interface "$INTERFACE"
     $ARGS
 }
 
