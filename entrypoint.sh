@@ -85,7 +85,7 @@ run() {
   exec tun2socks \
     --loglevel "$LOGLEVEL" \
     --device "$TUN" \
-    --proxy $PROXY \
+    --proxy "$PROXY" \
     --interface "$INTERFACE"
     $ARGS
 }
