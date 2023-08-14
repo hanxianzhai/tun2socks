@@ -1,10 +1,10 @@
-FROM alpine:latest
+FROM alpine:latest as builder
 
 WORKDIR /src
 
 RUN apk add --update --no-cache wget unzip \
     && wget https://github.com/xjasonlyu/tun2socks/releases/download/v2.5.1/tun2socks-linux-amd64.zip \
-    && unzip -d tun2socks-linux-amd64.zip \
+    && unzip tun2socks-linux-amd64.zip \
     && mv tun2socks-linux-amd64 tun2socks
     
 FROM alpine:latest
