@@ -49,7 +49,7 @@ config_route() {
 }
 
 run() {
-  create_tun
+  #create_tun
   #create_table
   #config_route
 
@@ -83,10 +83,10 @@ run() {
   fi
 
   exec tun2socks \
-    --loglevel "$LOGLEVEL" \
-    --device "$TUN" \
-    --proxy "$PROXY" \
-    --interface "$INTERFACE"
+    -loglevel "$LOGLEVEL" \
+    -device "$TUN" \
+    -proxy "$PROXY" \
+    -interface "$INTERFACE"
     $ARGS
 }
 
