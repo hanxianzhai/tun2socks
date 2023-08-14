@@ -49,7 +49,7 @@ config_route() {
 }
 
 run() {
-  #create_tun
+  create_tun
   #create_table
   #config_route
 
